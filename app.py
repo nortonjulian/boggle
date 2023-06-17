@@ -15,10 +15,10 @@ boggle_game = Boggle()
 def homepage():
     board = boggle_game.make_board()
     session['board'] = board
-    # high_score = session.get('high_score', 0)
-    # num_of_plays = session.get('num_of_plays', 0)
+    high_score = session.get('high_score', 0)
+    num_of_plays = session.get('num_of_plays', 0)
 
-    # return render_template('board.html', board=board, high_score=high_score, num_of_plays=num_of_plays)
+    return render_template('board.html', board=board, high_score=high_score, num_of_plays=num_of_plays)
 
 @app.route('/check-word')
 def check_word():
